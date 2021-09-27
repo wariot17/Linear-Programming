@@ -20,5 +20,5 @@ If using the first cell in the notebook (i.e. code that uses numpy), tableaus sh
 
 If you want your output in a text file uncomment the first line and last 2 lines of code.
 
-## Floating point errors
+## Floating Point Errors
 There were issues with floating point inaccuracies leading to cells which were theoretically 0 but ended up with very small numbers. This caused a problem when checking if a cell was 0. My fix for this issue was to round cells which have small numbers (absolute value<10^-4) to 0. This may cause inaccuracies based on your linear program and this value should be adjusted via the `rdzero()` function at the beginning of the code. This issue was *not* addressed in the second cell.
